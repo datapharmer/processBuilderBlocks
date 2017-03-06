@@ -258,7 +258,7 @@ private class TestPBB {
 	public static user createAdmin(){
 		Profile p = [SELECT Id FROM Profile WHERE Name='System Administrator'];
 
-		// create User
+	// create admin User following recommendations from https://help.salesforce.com/articleView?id=000182266&language=en_US&type=1 for uniqueness
         User u = new User();
 	String orgId = UserInfo.getOrganizationId();
     	String dateString = String.valueof(Datetime.now()).replace(' ','').replace(':','').replace('-','');
@@ -280,7 +280,7 @@ private class TestPBB {
         system.debug('u contains ' + u);
         return u;
 	}
-
+	// create User following recommendations from https://help.salesforce.com/articleView?id=000182266&language=en_US&type=1 for uniqueness
 	public static list<user> createUsers(integer numberOfUsers){
 		list<user> users = new list<user>();
 
