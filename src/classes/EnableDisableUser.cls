@@ -1,7 +1,7 @@
 /*
 Enables or Disables a user.
 */
-public with sharing class EnableDisableUser {
+public without sharing class EnableDisableUser {
     
     @InvocableMethod(label='Toggle A User')
     public static void DisableUsers(list<DisableRequest> requests) {
