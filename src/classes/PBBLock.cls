@@ -1,4 +1,4 @@
-public with sharing class PBBLock {
+public without sharing class PBBLock {
 	
 	@InvocableMethod(label='Lock a record')
 	public static void LockRecord(list<string> recordIds) {
